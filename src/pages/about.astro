@@ -1,3 +1,33 @@
+---
+const pageTitle = "About Me";
+
+const identity = {
+	name: "Bull3t",
+	occupation: "Software Engineer",
+	company: "bull3t.devs",
+	website: "https://bull3t.dev",
+    about: "I am a software engineer with a passion for building web applications and exploring new technologies. I enjoy learning and sharing knowledge with the developer community.",
+    };
+
+const skills = [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "SQL",
+    "HTML",
+    "CSS",
+    "Git",
+    "Docker",
+    "Kubernetes"
+];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -6,16 +36,35 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+        <title>{pageTitle}</title>
 	</head>
 	<body>
 
 		<a href="/">Home</a> | <a href="/about">About</a> | <a href="/blog">Blog</a>
 
-		<h1>Astro</h1>
-		<h1>About Me</h1>
+		<h1>{pageTitle}</h1>
 		<h2>... and my new astro site!</h2>
 
 		<p>I am working through astro's introduction tutorial.</p>
+
 		<p>This site will update as I progress more and more throught the tutoria.</p>
+
+        <p>Here are a few facts about me:</p>
+        <ul>
+            <li>Name: {identity.name}</li>
+            <li>Occupation: {identity.occupation}</li>
+            <li>Company: {identity.company}</li>
+            <li>Website: <a href={identity.website} target="_blank">{identity.website}</a></li>
+        </ul>
+        <p>{identity.about}</p>
+        <p>Skills:</p>
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+
+        {happy && <p>I am happy to be learning astro!</p>}
+        {finished && <p>I have finished this tutorial!</p>}
+        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
 	</body>
 </html>

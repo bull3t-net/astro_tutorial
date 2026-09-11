@@ -1,3 +1,6 @@
+---
+const pageTitle = "Home";
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -6,15 +9,18 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 
 		<a href="/">Home</a> | <a href="/about">About</a> | <a href="/blog">Blog</a>
 
 		<h1>Astro</h1>
+		<h1>{pageTitle}</h1>
 		<h2>... and my new astro site!</h2>
 
 		<p>I am working through astro's introduction tutorial.</p>
 		<p>This site will update as I progress more and more throught the tutoria.</p>
+
 	</body>
 </html>
