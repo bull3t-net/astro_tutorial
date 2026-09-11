@@ -1,4 +1,7 @@
 ---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
 const pageTitle = "Home";
 ---
 <html lang="en">
@@ -12,8 +15,7 @@ const pageTitle = "Home";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-
-		<a href="/">Home</a> | <a href="/about">About</a> | <a href="/blog">Blog</a>
+		<Navigation />
 
 		<h1>Astro</h1>
 		<h1>{pageTitle}</h1>
@@ -21,6 +23,7 @@ const pageTitle = "Home";
 
 		<p>I am working through astro's introduction tutorial.</p>
 		<p>This site will update as I progress more and more throught the tutoria.</p>
-
+		
+		<Footer />
 	</body>
 </html>

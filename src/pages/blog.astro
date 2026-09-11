@@ -1,8 +1,11 @@
 ---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
 const pageTitle = "Blog";
 ---
-<body> 
-    <a href="/">Home</a> | <a href="/about">About</a> | <a href="/blog">Blog</a>
+<body>
+	<Navigation />
 
 	<h1>{pageTitle}</h1>
 
@@ -12,4 +15,5 @@ const pageTitle = "Blog";
 			<li><a href="/posts/post3">Post 3</a></li>
 		</ul>
 
+	<Footer />
 </body>
