@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pages } from "../data/site";
+import CardPreview from "../components/CardPreview.astro";
+import PrintOptions from "../components/PrintOptions.astro";
+---
+
+<BaseLayout page={pages["pvc-business-cards"]}>
+  <CardPreview nfc={false} />
+  <PrintOptions />
+</BaseLayout>

@@ -1,0 +1,134 @@
+/* Collection styles. */
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 45px;
+}
+.section-heading h2 {
+  margin-bottom: 0;
+}
+.section-heading > p {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 320px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.product-panel {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.pvc-panel {
+  background: #eae4d9;
+}
+.nfc-panel {
+  background: #dde5d6;
+}
+.product-visual {
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sample-card {
+  width: 340px;
+  height: 214px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 11px;
+  box-shadow: 10px 22px 26px #193b3520;
+  transform: rotate(-9deg);
+  transition: transform 0.5s;
+}
+.sample-card > span {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  display: flex;
+  justify-content: space-between;
+}
+.sample-card strong {
+  font-size: 43px;
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+.sample-card small {
+  font-size: 7px;
+  letter-spacing: 0.07em;
+}
+.ivory {
+  background: #f5f1e5;
+  color: #533e2d;
+  border: 1px solid #fff;
+}
+.emerald {
+  background: #204c3c;
+  color: #ebf0d9;
+  transform: rotate(9deg);
+  border: 1px solid #587763;
+}
+.emerald strong {
+  font-family: var(--serif);
+  font-style: italic;
+}
+.product-panel:hover .sample-card {
+  transform: rotate(0) translateY(-8px);
+}
+.product-info {
+  padding: 10px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.product-info .eyebrow {
+  font-size: 9px;
+  margin-bottom: 10px;
+}
+.product-info h3 {
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+.product-info p:last-child {
+  font-size: 13px;
+  margin: 0;
+}
+.round-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #6c7b6350;
+  border-radius: 50%;
+  font-size: 24px;
+}
+.statement {
+  padding: 100px 6%;
+  text-align: center;
+  background: #d8e5c9;
+}
+.statement h2 {
+  font-size: clamp(40px, 5.2vw, 76px);
+  max-width: 1000px;
+  margin: 0 auto 35px;
+}
+.statement > div {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.statement a {
+  font-size: 13px;
+  border-bottom: 1px solid #768665;
+  padding: 5px;
+}

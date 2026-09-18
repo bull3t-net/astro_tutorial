@@ -1,0 +1,38 @@
+/* Sections styles. */
+.section {
+  padding: 100px 6%;
+  max-width: 1600px;
+  margin: auto;
+}
+.intro {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 10%;
+}
+.intro p:not(.eyebrow):not(.lead):not(.fine) {
+  color: var(--muted);
+}
+.lead {
+  font-size: 21px;
+  line-height: 1.55;
+  letter-spacing: -0.02em;
+}
+.inline-link {
+  display: inline-block;
+  font-size: 13px;
+  border-bottom: 1px solid #687f6d;
+  padding: 5px 0;
+  margin-top: 8px;
+}
+.inline-link:hover {
+  color: #00775d;
+}
+.fine {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #59655e;
+  margin-top: 20px;
+}
+.fine a {
+  text-decoration: underline;
+}

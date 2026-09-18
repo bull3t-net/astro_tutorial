@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Smith;Alex;;;
+FN:Alex Smith
+ORG:Example Studio
+TITLE:Creative Director
+EMAIL:alex@example.com
+NOTE:Cardistry website sample contact only. Not a real customer.
+END:VCARD

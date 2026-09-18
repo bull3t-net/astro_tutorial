@@ -1,0 +1,87 @@
+<form id="quote-form">
+  <div class="form-grid">
+    <label>
+      Your name *
+      <input name="name" autocomplete="name" required maxlength="100" />
+    </label>
+    <label>
+      Email address *
+      <input name="email" type="email" autocomplete="email" required maxlength="150" />
+    </label>
+    <label>
+      Company
+      <input name="company" autocomplete="organization" maxlength="150" />
+    </label>
+    <label>
+      Quantity *
+      <input name="quantity" type="number" min="1" max="100000" value="1" required />
+    </label>
+    <label>
+      Card type *
+      <select name="type">
+        <option value="NFC-enabled PVC">NFC Business Cards</option>
+        <option value="Non-NFC PVC">PVC Business Cards (Non-NFC)</option>
+        <option>Help me choose</option>
+      </select>
+    </label>
+    <label>
+      Print route
+      <select name="print">
+        <option>Double-sided print</option>
+        <option>Single-sided print</option>
+        <option>Not sure yet</option>
+      </select>
+    </label>
+    <label>
+      Design route
+      <select name="design">
+        <option>Artwork supplied</option>
+        <option>Design support (quoted separately)</option>
+        <option>Not sure yet</option>
+      </select>
+    </label>
+    <label>
+      Optional contact QR
+      <select name="qr">
+        <option>No QR required</option>
+        <option>Add a direct-data contact QR</option>
+        <option>Please advise</option>
+      </select>
+    </label>
+  </div>
+  <label>
+    Your brief
+    <textarea
+      name="brief"
+      rows="5"
+      maxlength="3000"
+      placeholder="Your brand, intended phones, contact fields, and anything else we should know…"
+    ></textarea>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" required />I understand that this opens my email app and I
+    still need to send the request.
+  </label>
+  <button type="submit" class="button dark">
+    Prepare my quote email ↗
+  </button>
+  <p class="fine">
+    No email app configured? Prepare your request, then copy the details below and email
+    sales@cardistry.co.za.
+  </p>
+  <div id="email-preview" hidden>
+    <label for="quote-text">Your prepared request</label>
+    <textarea id="quote-text" rows="10" readonly></textarea>
+    <a id="email-link" class="button dark">
+      Open email app ↗
+    </a>
+    <button type="button" class="button outline" id="copy-quote">
+      Copy request
+    </button>
+  </div>
+  <p id="form-status" role="status"></p>
+</form>
+
+<script>
+  import "../scripts/quote-form";
+</script>

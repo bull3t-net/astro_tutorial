@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleGrid from "../../components/ArticleGrid.astro";
+import { pages } from "../../data/site";
+---
+
+<BaseLayout page={pages.articles}>
+  <ArticleGrid section headingLevel="h2" />
+</BaseLayout>

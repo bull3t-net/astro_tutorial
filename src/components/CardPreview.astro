@@ -1,0 +1,79 @@
+---
+interface Props {
+  nfc?: boolean;
+}
+const { nfc = false } = Astro.props;
+---
+
+<section class="section product-detail">
+  <div class={`config-preview ${nfc ? "green-stage" : "sand-stage"}`}>
+    <div class="display-card configurator-card" id="preview-card">
+      <div class="card-top">
+        <span id="preview-brand">YOUR BRAND</span>
+        <span>{nfc ? ")))" : "✳"}</span>
+      </div>
+      <div class="card-center" id="preview-name">
+        Make it
+        <br />
+        personal.
+      </div>
+      <div class="card-bottom">
+        <span id="preview-role">YOUR NEXT GREAT INTRODUCTION</span>
+        <span>↗</span>
+      </div>
+    </div>
+    <span class="concept-label">LIVE DESIGN CONCEPT · NOT A PRINT PROOF</span>
+  </div>
+  <div>
+    <p class="eyebrow">YOUR CARD. YOUR CHARACTER.</p>
+    <h2>
+      Make it
+      <br />
+      <em>feel like you.</em>
+    </h2>
+    <p>
+      {nfc
+        ? "A physical card with contact information encoded directly on its NFC chip. Add a direct-data QR as another way to share. No hosted profile. No monthly subscription."
+        : "A considered alternative to the everyday paper handout. Custom printed PVC gives your brand a physical presence, with a choice of single-sided or double-sided artwork."}
+    </p>
+    <label for="card-name">Try your name or headline</label>
+    <input id="card-name" maxlength="36" placeholder="Make it personal." />
+    <label for="card-brand">Your business</label>
+    <input id="card-brand" maxlength="35" placeholder="YOUR BRAND" />
+    <fieldset class="swatches">
+      <legend>Explore a visual direction</legend>
+      <button
+        type="button"
+        data-theme="forest"
+        aria-label="Forest concept"
+        aria-pressed="true"
+        class="swatch forest"
+      ></button>
+      <button
+        type="button"
+        data-theme="ink"
+        aria-label="Ink concept"
+        aria-pressed="false"
+        class="swatch ink"
+      ></button>
+      <button
+        type="button"
+        data-theme="cream"
+        aria-label="Cream concept"
+        aria-pressed="false"
+        class="swatch cream"
+      ></button>
+    </fieldset>
+    <a class="button dark" href={`/contact/?item=${nfc ? "nfc-card" : "non-nfc-card"}`}>
+      Request your quote ↗
+    </a>
+    <p class="fine">
+      Illustrative colours and layout, not material or finish guarantees. Final artwork,
+      specification and price are confirmed before production.
+    </p>
+  </div>
+</section>
+
+<script>
+  import "../scripts/card-preview";
+</script>

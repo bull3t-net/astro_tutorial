@@ -1,0 +1,21 @@
+---
+import type { Faq } from "../data/faqs";
+interface Props {
+  items: readonly Faq[];
+  searchable?: boolean;
+}
+const { items, searchable = false } = Astro.props;
+---
+
+<div class="faq-list">
+  {items.map(({ question, answer }, index) => (
+    <details data-faq={searchable ? true : undefined}>
+      <summary>
+        <span class="faq-number">{String(index + 1).padStart(2, "0")}</span>
+        {question}
+        <span class="plus">+</span>
+      </summary>
+      <p>{answer}</p>
+    </details>
+  ))}
+</div>

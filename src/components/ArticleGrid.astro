@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+interface Props {
+  headingLevel?: "h2" | "h3";
+  section?: boolean;
+}
+const { headingLevel: Heading = "h3", section = false } = Astro.props;
+const Wrapper = section ? "section" : "div";
+const articles = (await getCollection("articles")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const symbols = [")))", "↗", "Aa"];
+---
+
+<Wrapper class:list={["article-grid", { section }]}>
+  {articles.map(({ id, data }, index) => (
+    <a class={`article-card article-${index}`} href={`/articles/${id}/`}>
+      <div class="article-art" aria-hidden="true">
+        {symbols[index % symbols.length]}
+        <span>{String(index + 1).padStart(2, "0")}</span>
+      </div>
+      <p class="eyebrow">{data.category}</p>
+      <Heading>{data.title}</Heading>
+      <p>{data.description}</p>
+      <span class="inline-link">Read the story ↗</span>
+    </a>
+  ))}
+</Wrapper>

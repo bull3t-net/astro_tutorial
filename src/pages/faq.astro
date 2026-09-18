@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pages } from "../data/site";
+import FaqList from "../components/FaqList.astro";
+import { faqs } from "../data/faqs";
+---
+
+<BaseLayout page={pages.faq}>
+  <section class="section faq-page">
+    <label for="faq-search">Find an answer</label>
+    <input
+      type="search"
+      id="faq-search"
+      placeholder="Try “internet”, “QR” or “design”…"
+    />
+    <p id="faq-count" class="fine" role="status">
+      Browse all questions below.
+    </p>
+    <FaqList items={faqs} searchable />
+    <p id="faq-empty" hidden>
+      No matching answers. Try another word or <a href="/contact/">ask us directly</a>.
+    </p>
+  </section>
+</BaseLayout>
+<script>
+  import "../scripts/faq-search";
+</script>

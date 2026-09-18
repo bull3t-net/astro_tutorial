@@ -1,0 +1,26 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  article: CollectionEntry<"articles">;
+}
+const { article } = Astro.props;
+const page = {
+  path: `/articles/${article.id}/`,
+  label: "Journal",
+  title: article.data.title,
+  description: "Practical advice for making your next introduction a little simpler.",
+};
+---
+
+<BaseLayout page={page} reading>
+  <article class="section prose">
+    <a class="inline-link" href="/articles/">
+      ← All articles
+    </a>
+    <slot />
+    <a class="button dark" href="/contact/">
+      Let’s talk about your card ↗
+    </a>
+  </article>
+</BaseLayout>

@@ -1,0 +1,80 @@
+<section id="experience" class="experience section">
+  <div class="experience-copy">
+    <p class="eyebrow">02 / GIVE IT A TRY</p>
+    <h2>
+      A small gesture.
+      <br />
+      <em>A proper introduction.</em>
+    </h2>
+    <p>
+      Turn the simulated connection off. Then try sharing a contact. Because the data is
+      on the card, there’s no online profile to load.
+    </p>
+    <button class="connection-switch" role="switch" aria-checked="true" id="connection">
+      <span class="switch-track"></span>
+      <span id="connection-label">Internet simulation: on</span>
+    </button>
+    <div class="demo-buttons">
+      <button class="button dark" id="tap-demo">
+        Simulate a tap ↗
+      </button>
+      <button class="button outline" id="qr-demo">
+        Simulate a QR scan
+      </button>
+    </div>
+    <p class="fine">
+      Illustrative demo, not an NFC reader or compatibility test. No actual phone settings
+      are changed. Sample contact only.
+    </p>
+    <a href="/faq/" class="inline-link">
+      Will it work on my phone? ↗
+    </a>
+  </div>
+  <div class="phone-scene">
+    <span class="scene-note">NO HOSTED PROFILE REQUIRED</span>
+    <div class="mini-card">
+      cardistry <span>)))</span>
+      <strong>
+        Your next
+        <br />
+        great connection.
+      </strong>
+    </div>
+    <div class="phone">
+      <div class="phone-island"></div>
+      <span class="phone-time">
+        9:41 <span id="phone-network">●●●</span>
+      </span>
+      <div class="contact-avatar">AS</div>
+      <p class="phone-kicker">DEMO CONTACT</p>
+      <h3>Alex Smith</h3>
+      <p>
+        Creative Director
+        <br />
+        Example Studio
+      </p>
+      <div class="contact-lines">
+        <span>alex@example.com</span>
+        <span>Contact data stored on card</span>
+      </div>
+      <div id="demo-status" role="status">
+        Ready when you are.
+        <br />
+        Try a tap or scan.
+      </div>
+      <a
+        href="/sample-contact.vcf"
+        download
+        class="save-contact"
+        id="save-contact"
+        hidden
+      >
+        Download sample contact ↓
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  import "../scripts/offline-demo";
+</script>

@@ -1,0 +1,230 @@
+{
+  "routes": 11,
+  "responsiveChecks": 44,
+  "internalTargets": 12,
+  "jsErrors": [],
+  "violations": [],
+  "interactions": "passed",
+  "results": [
+    {
+      "path": "/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/pvc-business-cards/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/nfc-business-cards/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/design-support/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/about/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/faq/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/contact/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/articles/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/articles/offline-nfc-explained/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/articles/nfc-or-qr/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/articles/artwork-checklist/",
+      "width": 1440,
+      "accessibility": []
+    },
+    {
+      "path": "/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/pvc-business-cards/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/nfc-business-cards/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/design-support/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/about/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/faq/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/contact/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/offline-nfc-explained/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/nfc-or-qr/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/artwork-checklist/",
+      "width": 768,
+      "layout": "pass"
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/pvc-business-cards/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/nfc-business-cards/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/design-support/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/about/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/faq/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/contact/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/offline-nfc-explained/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/nfc-or-qr/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/artwork-checklist/",
+      "width": 390,
+      "layout": "pass"
+    },
+    {
+      "path": "/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/pvc-business-cards/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/nfc-business-cards/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/design-support/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/about/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/faq/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/contact/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/offline-nfc-explained/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/nfc-or-qr/",
+      "width": 320,
+      "layout": "pass"
+    },
+    {
+      "path": "/articles/artwork-checklist/",
+      "width": 320,
+      "layout": "pass"
+    }
+  ]
+}

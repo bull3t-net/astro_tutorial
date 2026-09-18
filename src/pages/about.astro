@@ -1,88 +1,64 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
-
-const pageTitle = "About Me";
-
-const identity = {
-	name: "Bull3t",
-	occupation: "Software Engineer",
-	company: "bull3t.devs",
-	website: "https://bull3t.dev",
-    about: "I am a software engineer with a passion for building web applications and exploring new technologies. I enjoy learning and sharing knowledge with the developer community.",
-    };
-
-const skills = [
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "SQL",
-    "HTML",
-    "CSS",
-    "Git",
-    "Docker",
-    "Kubernetes"
-];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "crimson";
-const fontWeight = "bold";
-const textCase = "uppercase";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pages } from "../data/site";
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-        <title>{pageTitle}</title>
-	</head>
-	<body>
-        <Navigation />
 
-		<h1>{pageTitle}</h1>
-		<h2>... and my new astro site!</h2>
-
-		<p>I am working through astro's introduction tutorial.</p>
-
-		<p>This site will update as I progress more and more throught the tutoria.</p>
-
-        <p>Here are a few facts about me:</p>
-        <ul>
-            <li>Name: {identity.name}</li>
-            <li>Occupation: {identity.occupation}</li>
-            <li>Company: {identity.company}</li>
-            <li>Website: <a href={identity.website} target="_blank">{identity.website}</a></li>
-        </ul>
-        <p>{identity.about}</p>
-        <p>Skills:</p>
-        <ul>
-            {skills.map((skill) => <li class="skill">{skill}</li>)}
-        </ul>
-
-        {happy && <p>I am happy to be learning astro!</p>}
-        {finished && <p>I have finished this tutorial!</p>}
-        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
-        <Footer />
-	</body>
-    <style define:vars={{skillColor, fontWeight, textCase}}>
-        h1 {
-            color: purple;
-            font-size: 4rem;
-        }
-        .skill {
-            color: var(--skillColor);
-            font-weight: var(--fontWeight);
-            text-transform: var(--textCase);
-        }
-    </style>
-</html>
+<BaseLayout page={pages["about"]}>
+  <section class="section intro">
+    <div>
+      <p class="eyebrow">HELLO. WE’RE CARDISTRY.</p>
+      <h2>
+        Built around
+        <br />
+        <em>the human moment.</em>
+      </h2>
+    </div>
+    <div>
+      <p class="lead">
+        The handshake. The good conversation. The “let’s work together”. That’s what a
+        business card is really for.
+      </p>
+      <p>
+        Cardistry brings thoughtful print and direct-data technology together to make that
+        moment easier. A card should look like your brand, feel considered and do its job
+        without unnecessary complications.
+      </p>
+      <p>
+        Our approach is straightforward: custom PVC cards, NFC when you want it, and an
+        optional contact QR. No mandatory hosted profile. No monthly subscription for
+        direct-data sharing.
+      </p>
+    </div>
+  </section>
+  <section class="statement">
+    <p class="eyebrow">OUR PHILOSOPHY</p>
+    <h2>
+      Keep the card.
+      <br />
+      <em>Lose the complications.</em>
+    </h2>
+  </section>
+  <section class="section three-grid">
+    <article>
+      <h3>Design with intention.</h3>
+      <p>
+        A clear hierarchy and a distinct identity make a small card work harder. We leave
+        room for the information that matters.
+      </p>
+    </article>
+    <article>
+      <h3>Technology with a purpose.</h3>
+      <p>
+        Direct-data sharing is a deliberate choice, not a universal compatibility claim.
+        We explain both the benefits and the limits.
+      </p>
+    </article>
+    <article>
+      <h3>A more reusable introduction.</h3>
+      <p>
+        An NFC card can be kept and used for repeated introductions, reducing the need to
+        hand out a new paper card each time.
+      </p>
+    </article>
+  </section>
+</BaseLayout>

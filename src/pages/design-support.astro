@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pages } from "../data/site";
+---
+
+<BaseLayout page={pages["design-support"]}>
+  <section class="section intro">
+    <div>
+      <p class="eyebrow">FROM IDEA TO INTRODUCTION</p>
+      <h2>
+        A small canvas.
+        <br />
+        <em>A big part of your brand.</em>
+      </h2>
+    </div>
+    <div>
+      <p class="lead">
+        Already have artwork? Brilliant. Starting with a rough idea? You’re in the right
+        place.
+      </p>
+      <p>
+        Choose artwork supplied or design support when requesting a quote. We’ll help
+        define a clear visual direction around your identity, your details and the way you
+        want to connect.
+      </p>
+      <a class="button dark" href="/contact/?design=support">
+        Tell us about your design ↗
+      </a>
+    </div>
+  </section>
+  <section class="section soft">
+    <div class="three-grid">
+      <article>
+        <span class="step-num">01 / BRIEF</span>
+        <h3>Start with your story.</h3>
+        <p>
+          Share your logo, brand colours, contact details, print route and a few
+          references. Tell us whether you need NFC, a QR code, or both.
+        </p>
+      </article>
+      <article>
+        <span class="step-num">02 / DIRECTION</span>
+        <h3>Make room for the details.</h3>
+        <p>
+          We agree the design scope and cost in your quote. Legibility, hierarchy and
+          sufficient space for an optional QR guide the layout.
+        </p>
+      </article>
+      <article>
+        <span class="step-num">03 / APPROVAL</span>
+        <h3>Check it. Then check it again.</h3>
+        <p>
+          Review the artwork and contact information before production. Check spelling,
+          numbers, encoded data and your intended device compatibility.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section class="section intro">
+    <h2>
+      Ready-made artwork?
+      <br />
+      <em>Let’s keep it sharp.</em>
+    </h2>
+    <div>
+      <p>
+        Send a vector logo where available, use high-quality images and keep essential
+        information away from the edge. Request the final size, bleed and file
+        specification before exporting.
+      </p>
+      <a class="inline-link" href="/articles/artwork-checklist/">
+        Read the artwork checklist ↗
+      </a>
+    </div>
+  </section>
+</BaseLayout>

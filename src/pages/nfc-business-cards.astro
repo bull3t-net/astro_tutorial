@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pages } from "../data/site";
+import CardPreview from "../components/CardPreview.astro";
+import PrintOptions from "../components/PrintOptions.astro";
+import NfcComparison from "../components/NfcComparison.astro";
+---
+
+<BaseLayout page={pages["nfc-business-cards"]}>
+  <CardPreview nfc={true} />
+  <PrintOptions />
+  <NfcComparison />
+</BaseLayout>

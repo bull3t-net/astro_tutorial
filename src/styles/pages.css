@@ -1,0 +1,261 @@
+/* Pages styles. */
+.page-hero {
+  padding: 45px 6% 70px;
+  background: #e5ebdd;
+}
+.breadcrumb {
+  font-size: 11px;
+  color: #4e6253;
+}
+.page-hero .eyebrow {
+  margin-top: 50px;
+}
+.page-hero h1 {
+  max-width: 950px;
+  margin-bottom: 25px;
+  font-size: clamp(52px, 7vw, 98px);
+}
+.page-hero .lead {
+  max-width: 700px;
+  font-size: 18px;
+  color: #48604d;
+  margin-bottom: 0;
+}
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: center;
+}
+.config-preview {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.green-stage {
+  background: #c9d8c1;
+}
+.sand-stage {
+  background: #e6dece;
+}
+.configurator-card {
+  max-width: 85%;
+  transform: rotate(-8deg);
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+.configurator-card .card-center {
+  overflow-wrap: anywhere;
+  font-size: clamp(30px, 3.3vw, 47px);
+  min-height: 92px;
+}
+.configurator-card .card-top {
+  font-size: 15px;
+  gap: 15px;
+  overflow-wrap: anywhere;
+}
+.configurator-card[data-colour="ink"] {
+  background: #242826;
+  color: #f0efe5;
+  border-color: #656c61;
+}
+.configurator-card[data-colour="cream"] {
+  background: #f4f0e3;
+  color: #354a37;
+  border-color: #d2c8b2;
+}
+.concept-label {
+  position: absolute;
+  bottom: 30px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+.product-detail p {
+  color: #52624f;
+}
+.product-detail label {
+  font-size: 12px;
+}
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #aebba8;
+  background: #fffef9;
+  color: var(--ink);
+  border-radius: 3px;
+  padding: 12px;
+  margin: 6px 0 20px;
+  min-height: 48px;
+  font-size: 14px;
+}
+textarea {
+  resize: vertical;
+}
+.swatches {
+  padding: 0;
+  border: 0;
+  margin: 22px 0 28px;
+}
+.swatches legend {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.swatch {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  margin-right: 12px;
+  border: 1px solid #61755a;
+}
+.swatch[aria-pressed="true"] {
+  outline: 2px solid var(--forest);
+  outline-offset: 4px;
+}
+.forest {
+  background: #164b3b;
+}
+.ink {
+  background: #242826;
+}
+.cream {
+  background: #f4f0e3;
+}
+.soft {
+  background: #e9ede2;
+  max-width: none;
+}
+.three-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6%;
+  margin-top: 35px;
+}
+.three-grid article {
+  border-top: 1px solid #bac8b1;
+  padding-top: 25px;
+}
+.three-grid h3 {
+  margin: 20px 0;
+}
+.three-grid p {
+  font-size: 15px;
+  color: #52624f;
+}
+.step-num {
+  font-size: 12px;
+  letter-spacing: 0.07em;
+}
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin: 40px 0;
+}
+.comparison article {
+  background: #e8eedf;
+  padding: 35px;
+}
+.comparison article:last-child {
+  background: #eeeee6;
+}
+.comparison ul {
+  padding-left: 20px;
+}
+.comparison li {
+  padding: 8px 0;
+  font-size: 15px;
+}
+.faq-page {
+  max-width: 1100px;
+}
+.faq-page > input {
+  max-width: 600px;
+}
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 10%;
+}
+.contact-layout aside > p {
+  color: #53664f;
+}
+.contact-layout aside .eyebrow {
+  font-size: 9px;
+}
+.contact-note {
+  border-top: 1px solid var(--line);
+  padding-top: 25px;
+  margin-top: 40px;
+}
+.contact-note h3 {
+  font-size: 21px;
+}
+.contact-note p {
+  font-size: 13px;
+  color: #52624f;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+.checkbox {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 12px;
+}
+.checkbox input {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: var(--forest);
+}
+#email-preview {
+  margin-top: 30px;
+  padding: 20px;
+  background: #e8edde;
+}
+#email-preview .button {
+  margin: 5px 4px 0 0;
+}
+#form-status {
+  font-size: 13px;
+  color: var(--forest);
+  margin-top: 20px;
+}
+.reading-hero h1 {
+  font-size: clamp(45px, 5.6vw, 80px);
+}
+.prose {
+  max-width: 850px;
+}
+.prose h2 {
+  font-size: 34px;
+  letter-spacing: -0.035em;
+  margin: 45px 0 20px;
+}
+.prose > p {
+  line-height: 1.9;
+  color: #445540;
+}
+.prose > .inline-link {
+  margin-bottom: 30px;
+}
+.prose .button {
+  margin-top: 25px;
+}

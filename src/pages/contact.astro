@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pages } from "../data/site";
+import QuoteForm from "../components/QuoteForm.astro";
+---
+
+<BaseLayout page={pages.contact} showClosing={false}>
+  <section class="section contact-layout">
+    <aside>
+      <p class="eyebrow">LET’S GET THE DETAILS RIGHT</p>
+      <h2>
+        A good card <br />
+        starts with <br />
+        <em>a conversation.</em>
+      </h2>
+      <p>
+        For one person or a whole team, tell us what you have in mind. We’ll confirm your
+        specification, design needs, pricing and timing.
+      </p>
+      <a class="inline-link" href="mailto:sales@cardistry.co.za">
+        sales@cardistry.co.za ↗
+      </a>
+      <div class="contact-note">
+        <h3>No checkout. No surprises.</h3>
+        <p>
+          This form prepares an email in your own mail app. Nothing is submitted to a
+          website database. Your email provider handles the message when you send it.
+        </p>
+      </div>
+    </aside>
+    <QuoteForm />
+  </section>
+</BaseLayout>

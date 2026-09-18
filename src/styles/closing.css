@@ -1,0 +1,28 @@
+/* Closing styles. */
+.closing {
+  position: relative;
+  overflow: hidden;
+  background: var(--forest);
+  color: var(--paper);
+  padding: 80px 6%;
+  isolation: isolate;
+}
+.closing h2 {
+  font-size: clamp(47px, 6.3vw, 90px);
+  margin-bottom: 30px;
+}
+.closing em {
+  color: #cde1bd;
+}
+.closing-star {
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 280px;
+  color: #a1c393;
+  z-index: -1;
+}
+.closing .eyebrow {
+  color: #d8e6d0;
+}

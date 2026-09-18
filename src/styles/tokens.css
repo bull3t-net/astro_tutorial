@@ -1,0 +1,11 @@
+/* Tokens styles. */
+:root {
+  --paper: #f8f7f2;
+  --ink: #252b29;
+  --forest: #073d34;
+  --mint: #cce8c6;
+  --green: #00a984;
+  --muted: #59655e;
+  --line: #d9dfd5;
+  --serif: Georgia, "Times New Roman", serif;
+}

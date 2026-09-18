@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "htmlPages": 11,
+  "astroFiles": 29,
+  "markdownArticles": 3,
+  "requiredFiles": 23,
+  "deploymentFiles": [
+    {
+      "path": "dist/_astro/BaseLayout.CTfkVaZ8.css",
+      "lines": 2000,
+      "sha256": "11ab0ac0e47fead3af21c03a0071991f070f18a1d6e39ec5c5c99051cd7b5f7e"
+    },
+    {
+      "path": "dist/_astro/CardPreview.astro_astro_type_script_index_0_lang.4XwDrqwK.js",
+      "lines": 18,
+      "sha256": "55da10782101febceb4f52469a00c5c4baaa6ae5e231ca6ece0dc4261b651efd"
+    },
+    {
+      "path": "dist/_astro/Header.astro_astro_type_script_index_0_lang.DLUWjAmL.js",
+      "lines": 15,
+      "sha256": "7e3d1edb34226f99a48b9e5aecde01fe3057d118e55d9405a5aa7c2396f6e15a"
+    },
+    {
+      "path": "dist/_astro/Hero.astro_astro_type_script_index_0_lang.DghFv70O.js",
+      "lines": 15,
+      "sha256": "1978b48e53c694d39945a82f4b8a3b94860987d8a3bb2c60f32f56186096f9e3"
+    },
+    {
+      "path": "dist/_astro/OfflineDemo.astro_astro_type_script_index_0_lang.DcQKOWQf.js",
+      "lines": 20,
+      "sha256": "59eddec949c1b712928f7f4af81932d0bc66b06cda357e82106ae81c30fa3207"
+    },
+    {
+      "path": "dist/_astro/QuoteForm.astro_astro_type_script_index_0_lang.Cs1a-e4H.js",
+      "lines": 53,
+      "sha256": "8ffb093e0717470bc603049a22e897a8137024dcd37d6295e328b6371cc7a897"
+    },
+    {
+      "path": "dist/_astro/faq.astro_astro_type_script_index_0_lang.CPNUk36S.js",
+      "lines": 14,
+      "sha256": "337a0215f4880bc179b93a97bf541a66f924c4cb2058d2ae2cacb79d6068c6bb"
+    },
+    {
+      "path": "dist/about/index.html",
+      "lines": 167,
+      "sha256": "012514efeafc4f1c421beb0e58fc30984d2d782b3369837f701bfe56bd70c631"
+    },
+    {
+      "path": "dist/articles/artwork-checklist/index.html",
+      "lines": 146,
+      "sha256": "b57bf7ea294f839a8c51ac04dbcb5e758ea5a862c4150b72439f46427e1004fa"
+    },
+    {
+      "path": "dist/articles/index.html",
+      "lines": 138,
+      "sha256": "d2871b6c1579d5f4ff3e1ebd2a91cb39ca6f6e7881145973124eff3527865ebd"
+    },
+    {
+      "path": "dist/articles/nfc-or-qr/index.html",
+      "lines": 142,
+      "sha256": "fb4ada5360f7f5e4eac6bf4c7ef71a6df8374198bb38567c21d90e0c723df8ec"
+    },
+    {
+      "path": "dist/articles/offline-nfc-explained/index.html",
+      "lines": 150,
+      "sha256": "8ba155b4d47dd5d87bb6a366875297f7449ef429fc580e1e51a4898227e6ccc1"
+    },
+    {
+      "path": "dist/contact/index.html",
+      "lines": 201,
+      "sha256": "9536e9b7ff49d9dc5f0c5624791a6114825f5200c189396ae0f409214f5d1009"
+    },
+    {
+      "path": "dist/design-support/index.html",
+      "lines": 176,
+      "sha256": "c003e5d2db1457e05349cf9c52bd26c5badaec826c3dfbf3b6287f8ba70e89a2"
+    },
+    {
+      "path": "dist/faq/index.html",
+      "lines": 246,
+      "sha256": "df0c256179c632cf8d677326d913bd0e245ba3039314f9b5646bd0017785ba7b"
+    },
+    {
+      "path": "dist/index.html",
+      "lines": 446,
+      "sha256": "f76a7a6c3b197f9066bd5d88767ea64c80e549e0473ba9c99bc50473b496d057"
+    },
+    {
+      "path": "dist/nfc-business-cards/index.html",
+      "lines": 248,
+      "sha256": "a5b638aecd2e84c8454d2edbcdf28618ea0eca0cb3f09a4e5c41babdec224442"
+    },
+    {
+      "path": "dist/pvc-business-cards/index.html",
+      "lines": 213,
+      "sha256": "be43dbd1a1bd578d3509ca4d5678ad4e09eca019c4be6d557f1d18c00d6de51d"
+    }
+  ]
+}

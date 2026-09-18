@@ -1,0 +1,67 @@
+/* Navigation styles. */
+.announcement {
+  height: 35px;
+  background: var(--forest);
+  color: #e5f1df;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.announcement span {
+  opacity: 0.8;
+}
+.site-header {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4.5%;
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid #e5e8df;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.brand img {
+  width: 150px;
+  height: 75px;
+  object-fit: contain;
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+.site-header nav a {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.site-header nav a:not(.nav-cta):hover,
+.site-header nav a[aria-current="page"]:not(.nav-cta) {
+  color: #00775d;
+}
+.nav-cta {
+  background: var(--forest);
+  color: white;
+  padding: 13px 22px;
+  border-radius: 3px;
+}
+.menu-toggle {
+  display: none;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}

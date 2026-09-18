@@ -1,0 +1,44 @@
+/* Footer styles. */
+footer {
+  padding: 50px 6% 25px;
+  background: var(--paper);
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+.footer-top p {
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+  color: #53604f;
+}
+.footer-top > a:last-child {
+  font-size: 23px;
+  line-height: 1.6;
+  letter-spacing: -0.035em;
+}
+.footer-top > a:last-child span {
+  font-size: 13px;
+  letter-spacing: 0;
+}
+footer nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 25px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #5f6d59;
+  margin-top: 25px;
+  gap: 20px;
+}

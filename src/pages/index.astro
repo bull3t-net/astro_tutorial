@@ -1,29 +1,23 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
-
-const pageTitle = "Home";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pages } from "../data/site";
+import OfflineDemo from "../components/OfflineDemo.astro";
+import Hero from "../components/home/Hero.astro";
+import Benefits from "../components/home/Benefits.astro";
+import Difference from "../components/home/Difference.astro";
+import Collection from "../components/home/Collection.astro";
+import Statement from "../components/home/Statement.astro";
+import FaqPreview from "../components/home/FaqPreview.astro";
+import Journal from "../components/home/Journal.astro";
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Navigation />
 
-		<h1>Astro</h1>
-		<h1>{pageTitle}</h1>
-		<h2>... and my new astro site!</h2>
-
-		<p>I am working through astro's introduction tutorial.</p>
-		<p>This site will update as I progress more and more throught the tutoria.</p>
-		
-		<Footer />
-	</body>
-</html>
+<BaseLayout page={pages.home} showHero={false}>
+  <Hero />
+  <Benefits />
+  <Difference />
+  <OfflineDemo />
+  <Collection />
+  <Statement />
+  <FaqPreview />
+  <Journal />
+</BaseLayout>

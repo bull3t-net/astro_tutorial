@@ -1,0 +1,38 @@
+---
+import { navigation } from "../data/site";
+interface Props {
+  activePage: string;
+}
+const { activePage } = Astro.props;
+---
+
+<a class="skip" href="#main">
+  Skip to content
+</a>
+<div class="announcement">
+  YOUR DETAILS. ON THE CARD. NOT IN THE CLOUD. <span>NO MONTHLY SUBSCRIPTION ↗</span>
+</div>
+<header class="site-header">
+  <a href="/" aria-label="Cardistry home" class="brand">
+    <img src="/assets/cardistry-wordmark.png" alt="Cardistry" width="150" height="75" />
+  </a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">
+    Menu <span>＋</span>
+  </button>
+  <nav id="navigation" aria-label="Main navigation">
+    {navigation.map(({ key: path, label, href }) => (
+      <a
+        href={href}
+        aria-current={activePage === path ? "page" : undefined}
+        class={path === "contact" ? "nav-cta" : ""}
+      >
+        {label}
+        {path === "contact" && <span> ↗</span>}
+      </a>
+    ))}
+  </nav>
+</header>
+
+<script>
+  import "../scripts/navigation";
+</script>

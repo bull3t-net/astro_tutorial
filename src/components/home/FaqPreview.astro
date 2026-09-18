@@ -1,0 +1,21 @@
+---
+import FaqList from "../FaqList.astro";
+import { faqs } from "../../data/faqs";
+---
+
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">04 / GOOD TO KNOW</p>
+      <h2>
+        A little clarity.
+        <br />
+        <em>Before your first tap.</em>
+      </h2>
+    </div>
+    <a class="inline-link" href="/faq/">
+      All your questions, answered ↗
+    </a>
+  </div>
+  <FaqList items={faqs.slice(0, 4)} />
+</section>

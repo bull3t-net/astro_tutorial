@@ -1,0 +1,65 @@
+/* Articles styles. */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.article-art {
+  position: relative;
+  height: 230px;
+  background: #dbe7cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  line-height: 1;
+  font-family: var(--serif);
+  font-style: italic;
+  color: #2d593a;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-radius 0.4s;
+}
+.article-art:after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 1px solid #30473030;
+  border-radius: 50%;
+  right: -30px;
+  bottom: -40px;
+}
+.article-art span {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  font: 10px Arial;
+  letter-spacing: 0.1em;
+}
+.article-1 .article-art {
+  background: #244c3c;
+  color: #d9e8c6;
+}
+.article-2 .article-art {
+  background: #e9ddcc;
+  color: #655239;
+}
+.article-card:hover .article-art {
+  border-radius: 4px 65px 4px 4px;
+}
+.article-card .eyebrow {
+  font-size: 9px;
+  margin-bottom: 12px;
+}
+.article-card h3,
+.article-card h2 {
+  font-size: 27px;
+  line-height: 1.17;
+  margin-bottom: 15px;
+}
+.article-card p:not(.eyebrow) {
+  font-size: 14px;
+  color: var(--muted);
+}

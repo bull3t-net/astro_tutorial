@@ -1,8 +1,36 @@
 ---
-const platform = "Github";
-const username = "bull3t";
+import { navigation } from "../data/site";
 ---
 
 <footer>
-    <p>Learn more about my projects on <a href={`https://github.com/${username}`} target="_blank">{platform}</a></p>
+  <div class="footer-top">
+    <a class="brand" href="/">
+      <img
+        src="/assets/cardistry-wordmark.png"
+        alt="Cardistry"
+        width="180"
+        height="90"
+        loading="lazy"
+      />
+    </a>
+    <p>
+      Good design. Real connections.
+      <br />
+      No unnecessary complications.
+    </p>
+    <a href="mailto:sales@cardistry.co.za">
+      Let’s talk ↗<br />
+      <span>sales@cardistry.co.za</span>
+    </a>
+  </div>
+  <nav aria-label="Footer navigation">
+    {navigation.map(({ label, href }) => (
+      <a href={href}>{label}</a>
+    ))}
+  </nav>
+  <div class="footer-bottom">
+    <span>© Cardistry · South Africa</span>
+    <span>Direct data. Thoughtfully designed.</span>
+    <a href="#main">Back to top ↑</a>
+  </div>
 </footer>

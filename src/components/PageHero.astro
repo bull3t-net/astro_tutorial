@@ -1,0 +1,22 @@
+---
+import type { PageMetadata } from "../data/site";
+interface Props {
+  page: PageMetadata;
+  reading?: boolean;
+}
+const { page, reading = false } = Astro.props;
+---
+
+<section class:list={["page-hero", { "reading-hero": reading }]}>
+  <a class="breadcrumb" href="/">
+    Home
+  </a>
+  <span class="breadcrumb"> / {page.label}</span>
+  <p class="eyebrow">
+    {page.path === "/contact/"
+      ? "YOUR NEXT CHAPTER STARTS HERE"
+      : "THE ART OF A BETTER INTRODUCTION"}
+  </p>
+  <h1>{page.title}</h1>
+  <p class="lead">{page.description}</p>
+</section>

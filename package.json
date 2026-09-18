@@ -1,20 +1,28 @@
 {
-  "name": "turorial",
+  "name": "cardistry-astro",
+  "version": "1.1.0",
+  "private": true,
   "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "astro dev --host 0.0.0.0",
+    "build": "astro build && node scripts/format-deployment.mjs",
+    "preview": "astro preview --host 0.0.0.0",
+    "test": "node tests/qa.mjs",
+    "check": "astro check",
+    "format": "prettier --write src scripts tests *.mjs *.json *.md .prettierrc.json",
+    "format:check": "prettier --check src scripts tests *.mjs *.json *.md .prettierrc.json",
+    "test:content": "node tests/content-regression.mjs",
+    "test:structure": "node tests/structure.mjs"
   },
   "dependencies": {
-    "astro": "^7.3.2"
+    "astro": "7.3.3"
   },
-  "allowScripts": {
-    "esbuild": true
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.50.0",
+    "prettier": "^3.9.7",
+    "prettier-plugin-astro": "^1.0.1",
+    "typescript": "^6.0.3"
   }
 }
