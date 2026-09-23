@@ -99,7 +99,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(ellipse at 80% 40%, #497a53 0%, #174c3c 43%, #073d34 73%);
+  background: radial-gradient(
+    ellipse at 80% 40%,
+    #497a53 0%,
+    #174c3c 43%,
+    #073d34 73%
+  );
   isolation: isolate;
   min-width: 0;
 }
@@ -198,7 +203,12 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(110deg, transparent 15%, #ffffff0b 40%, transparent 60%);
+  background: linear-gradient(
+    110deg,
+    transparent 15%,
+    #ffffff0b 40%,
+    transparent 60%
+  );
 }
 .floating-tag {
   position: absolute;

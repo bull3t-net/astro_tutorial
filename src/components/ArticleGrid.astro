@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import ArticleMeta from "./ArticleMeta.astro";
 interface Props {
   headingLevel?: "h2" | "h3";
   section?: boolean;
@@ -21,6 +22,12 @@ const symbols = [")))", "↗", "Aa"];
       </div>
       <p class="eyebrow">{data.category}</p>
       <Heading>{data.title}</Heading>
+
+      <ArticleMeta
+       author={data.author}
+       publishedDate={data.publishedDate}
+      />
+
       <p>{data.description}</p>
       <span class="inline-link">Read the story ↗</span>
     </a>

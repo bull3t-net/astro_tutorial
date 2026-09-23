@@ -63,3 +63,20 @@
   font-size: 14px;
   color: var(--muted);
 }
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.6rem;
+  color: var(--muted);
+  line-height: 1.5;
+  overflow: anywhere;
+}
+.article-card p.article-meta {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+}
+.prose p.article-meta {
+  margin: 1 rem 0 1.5rem;
+  font-size: 0.9rem;
+}

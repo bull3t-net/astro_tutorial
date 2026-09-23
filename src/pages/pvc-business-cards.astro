@@ -3,9 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { pages } from "../data/site";
 import CardPreview from "../components/CardPreview.astro";
 import PrintOptions from "../components/PrintOptions.astro";
+import PvcComparison from "../components/PvcComparison.astro";
 ---
 
 <BaseLayout page={pages["pvc-business-cards"]}>
+  <PvcComparison />
   <CardPreview nfc={false} />
   <PrintOptions />
 </BaseLayout>

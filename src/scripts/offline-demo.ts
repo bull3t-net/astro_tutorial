@@ -5,7 +5,9 @@ connection?.addEventListener("click", () => {
   connection.setAttribute("aria-checked", String(on));
   document.querySelector("#connection-label")!.textContent =
     `Internet simulation: ${on ? "on" : "off"}`;
-  document.querySelector("#phone-network")!.textContent = on ? "●●●" : "OFFLINE";
+  document.querySelector("#phone-network")!.textContent = on
+    ? "●●●"
+    : "OFFLINE";
 });
 function demo(method: string) {
   const status = document.querySelector("#demo-status");
@@ -14,7 +16,11 @@ function demo(method: string) {
   document.querySelector("#save-contact")?.removeAttribute("hidden");
   document.querySelector(".phone")?.classList.add("connected");
 }
-document.querySelector("#tap-demo")?.addEventListener("click", () => demo("Tap"));
-document.querySelector("#qr-demo")?.addEventListener("click", () => demo("Scan"));
+document
+  .querySelector("#tap-demo")
+  ?.addEventListener("click", () => demo("Tap"));
+document
+  .querySelector("#qr-demo")
+  ?.addEventListener("click", () => demo("Scan"));
 
 export {};

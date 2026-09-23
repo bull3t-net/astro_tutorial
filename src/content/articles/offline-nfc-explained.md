@@ -2,6 +2,8 @@
 title: "What makes an NFC card genuinely offline?"
 description: "Direct data, not a detour through a website. Here’s why that matters."
 category: "THE TECHNOLOGY"
+author: "Cardistry Team"
+publishedDate: "2026-09-22"
 order: 0
 ---
 

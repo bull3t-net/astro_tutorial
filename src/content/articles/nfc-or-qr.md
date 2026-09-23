@@ -2,6 +2,8 @@
 title: "NFC or QR? You don’t have to choose."
 description: "Two ways to share your details. One considered card."
 category: "THE EVERYDAY GUIDE"
+author: "Cardistry Team"
+publishedDate: "2026-09-22"
 order: 1
 ---
 

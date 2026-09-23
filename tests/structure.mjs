@@ -71,7 +71,10 @@ for (const path of assets) {
     `${path} formatting`,
   );
   if (parser === "html") {
-    assert.ok(lines.length > 100, `${path} must contain readable indented HTML`);
+    assert.ok(
+      lines.length > 100,
+      `${path} must contain readable indented HTML`,
+    );
     assert.match(contents, /\n {2}<head>/, `${path} head indentation`);
   }
   fileReports.push({
@@ -80,10 +83,15 @@ for (const path of assets) {
     sha256: createHash("sha256").update(contents).digest("hex"),
   });
 }
-const astroFiles = (await filesIn("src")).filter((path) => path.endsWith(".astro"));
+const astroFiles = (await filesIn("src")).filter((path) =>
+  path.endsWith(".astro"),
+);
 for (const path of astroFiles) {
   const lines = (await readFile(path, "utf8")).split("\n").length;
-  assert.ok(lines < 250, `${path} should remain a focused module, found ${lines} lines`);
+  assert.ok(
+    lines < 250,
+    `${path} should remain a focused module, found ${lines} lines`,
+  );
 }
 const report = {
   status: "passed",
@@ -93,5 +101,8 @@ const report = {
   requiredFiles: required.length,
   deploymentFiles: fileReports,
 };
-await writeFile("qa/structure-report.json", JSON.stringify(report, null, 2) + "\n");
+await writeFile(
+  "qa/structure-report.json",
+  JSON.stringify(report, null, 2) + "\n",
+);
 console.log(JSON.stringify(report, null, 2));

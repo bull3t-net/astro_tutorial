@@ -41,16 +41,20 @@ export type PageKey =
   | "faq"
   | "contact"
   | "articles";
-export const navigation: readonly { key: PageKey; label: string; href: string }[] = [
-  {
-    key: "pvc-business-cards",
-    label: "PVC Business Cards",
-    href: "/pvc-business-cards/",
-  },
+export const navigation: readonly {
+  key: PageKey;
+  label: string;
+  href: string;
+}[] = [
   {
     key: "nfc-business-cards",
     label: "NFC Business Cards",
     href: "/nfc-business-cards/",
+  },
+  {
+    key: "pvc-business-cards",
+    label: "PVC Business Cards",
+    href: "/pvc-business-cards/",
   },
   {
     key: "design-support",

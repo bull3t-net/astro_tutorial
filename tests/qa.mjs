@@ -44,14 +44,22 @@ for (const width of [1440, 768, 390, 320]) {
       measurements.scroll <= width,
       `overflow ${width} ${path}: ${measurements.scroll}`,
     );
-    assert.ok(measurements.height > measurements.windowHeight, `scrollable ${path}`);
+    assert.ok(
+      measurements.height > measurements.windowHeight,
+      `scrollable ${path}`,
+    );
     const anchors = await page
       .locator("a[href]")
       .evaluateAll((nodes) => nodes.map((n) => n.getAttribute("href")));
     for (const href of anchors) {
-      if (href.startsWith("/") && !href.startsWith("//")) links.add(href.split("?")[0]);
+      if (href.startsWith("/") && !href.startsWith("//"))
+        links.add(href.split("?")[0]);
       if (href.startsWith("#"))
-        assert.equal(await page.locator(href).count(), 1, `anchor ${path} ${href}`);
+        assert.equal(
+          await page.locator(href).count(),
+          1,
+          `anchor ${path} ${href}`,
+        );
     }
     if (width === 1440) {
       const axe = await new AxeBuilder({ page })
@@ -72,7 +80,8 @@ for (const width of [1440, 768, 390, 320]) {
     } else results.push({ path, width, layout: "pass" });
     if (path === "/" && [1440, 390].includes(width)) {
       await page.screenshot({ path: `qa/home-${width}.png`, fullPage: true });
-      if (width === 1440) await page.screenshot({ path: "qa/home-desktop.png" });
+      if (width === 1440)
+        await page.screenshot({ path: "qa/home-desktop.png" });
     }
   }
 }
@@ -84,13 +93,25 @@ await page.setViewportSize({ width: 390, height: 844 });
 await page.goto(base + "/");
 assert.match(await page.locator("h1").innerText(), /No connection required\./);
 await page.locator(".menu-toggle").click();
-assert.equal(await page.locator(".menu-toggle").getAttribute("aria-expanded"), "true");
+assert.equal(
+  await page.locator(".menu-toggle").getAttribute("aria-expanded"),
+  "true",
+);
 await page.keyboard.press("Escape");
-assert.equal(await page.locator(".menu-toggle").getAttribute("aria-expanded"), "false");
+assert.equal(
+  await page.locator(".menu-toggle").getAttribute("aria-expanded"),
+  "false",
+);
 await page.locator("#connection").click();
-assert.equal(await page.locator("#connection").getAttribute("aria-checked"), "false");
+assert.equal(
+  await page.locator("#connection").getAttribute("aria-checked"),
+  "false",
+);
 await page.locator("#tap-demo").click();
-assert.match(await page.locator("#demo-status").textContent(), /internet simulation off/);
+assert.match(
+  await page.locator("#demo-status").textContent(),
+  /internet simulation off/,
+);
 assert.equal(await page.locator("#save-contact").isVisible(), true);
 await page.locator("#qr-demo").click();
 assert.match(await page.locator("#demo-status").textContent(), /the QR/);
@@ -101,14 +122,20 @@ await page.locator("#card-name").fill("BULL3T");
 await page.locator("#card-brand").fill("CARDISTRY");
 assert.equal(await page.locator("#preview-name").textContent(), "BULL3T");
 await page.locator('[data-theme="cream"]').click();
-assert.equal(await page.locator("#preview-card").getAttribute("data-colour"), "cream");
+assert.equal(
+  await page.locator("#preview-card").getAttribute("data-colour"),
+  "cream",
+);
 await page.locator("#card-name").fill("<img src=x onerror=alert(1)>");
 assert.equal(await page.locator("#preview-name img").count(), 0);
 await page.goto(base + "/faq/");
 await page.locator("#faq-search").fill("subscription");
 assert.ok((await page.locator("[data-faq]:visible").count()) > 0);
 await page.locator("[data-faq]:visible summary").first().click();
-assert.equal(await page.locator("[data-faq]:visible").first().getAttribute("open"), "");
+assert.equal(
+  await page.locator("[data-faq]:visible").first().getAttribute("open"),
+  "",
+);
 await page.locator("#faq-search").fill("nothing-matches-this-123");
 assert.equal(await page.locator("#faq-empty").isVisible(), true);
 await page.goto(base + "/contact/?item=non-nfc-card&design=support");
@@ -124,10 +151,14 @@ await page.locator("[name=email]").fill("qa@example.com");
 await page.locator("[name=company]").fill("Test & Company");
 await page.locator("[name=quantity]").fill("25");
 await page.locator("[name=qr]").selectOption("Add a direct-data contact QR");
-await page.locator("[name=brief]").fill("Double-sided team cards & artwork review");
+await page
+  .locator("[name=brief]")
+  .fill("Double-sided team cards & artwork review");
 await page.locator("input[type=checkbox]").check();
 await page.locator("button[type=submit]").click();
-const mail = decodeURIComponent(await page.locator("#email-link").getAttribute("href"));
+const mail = decodeURIComponent(
+  await page.locator("#email-link").getAttribute("href"),
+);
 for (const expected of [
   "mailto:sales@cardistry.co.za",
   "Non-NFC PVC",
@@ -143,7 +174,9 @@ await page.goto(base + "/nfc-business-cards/");
 await page.screenshot({ path: "qa/nfc-desktop.png", fullPage: true });
 await page.emulateMedia({ reducedMotion: "reduce" });
 assert.equal(
-  await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior),
+  await page.evaluate(
+    () => getComputedStyle(document.documentElement).scrollBehavior,
+  ),
   "auto",
 );
 assert.equal(errors.length, 0, JSON.stringify(errors));

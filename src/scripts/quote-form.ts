@@ -3,7 +3,8 @@ const form = document.querySelector<HTMLFormElement>("#quote-form");
 if (form) {
   const params = new URLSearchParams(location.search);
   if (params.get("item") === "non-nfc-card")
-    (form.elements.namedItem("type") as HTMLSelectElement).value = "Non-NFC PVC";
+    (form.elements.namedItem("type") as HTMLSelectElement).value =
+      "Non-NFC PVC";
   if (params.get("design") === "support")
     (form.elements.namedItem("design") as HTMLSelectElement).value =
       "Design support (quoted separately)";

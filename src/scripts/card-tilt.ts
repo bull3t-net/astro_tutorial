@@ -1,5 +1,8 @@
 /** Card tilt interaction. No server-side data submission. */
-if (matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches) {
+if (
+  matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)")
+    .matches
+) {
   document.querySelectorAll<HTMLElement>("[data-tilt]").forEach((card) => {
     card.addEventListener("pointermove", (e) => {
       const box = card.getBoundingClientRect();

@@ -2,6 +2,8 @@
 title: "Before you print: your artwork checklist."
 description: "A little preparation makes a much better first impression."
 category: "THE DESIGN NOTES"
+author: "Cardistry Team"
+publishedDate: "2026-09-22"
 order: 2
 ---
 
